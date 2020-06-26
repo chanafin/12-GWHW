@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <h1> Mission to Mars </h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+{% for mars in mars  %}
+        <h1 class= "heading"> Latest Mars News </h1>
+        <h3 class="heading">{{mars.News_Title}} </h3>
+        <h5 class= "heading"> {{mars.News_Paragraph}} </h5>
+        <h1 class= "heading"> Featured Mars Image </h1>
+        <img src = '{{mars.Mars_Photo}}' alt = Mars Photo height = '350' width = '500' >
+        <h3 class="heading">Current Weather on Mars</h3>
+        <h5 class="heading">{{mars.Mars_Weather}} </h5>
+        <h3 class="heading">Mars Facts</h3>
+        <table> {{mars.Mars_Overview | safe}}<table>
+        <h3 class="heading">Mars Hemispheres</h3>
+        <img src= {{mars.Hemisphere_Photos.0.img_url}} Alt = "1" height = '200' width = '250'>
+        <img src= {{mars.Hemisphere_Photos.1.img_url}} Alt = "2" height = '200' width = '250'>
+        <img src= {{mars.Hemisphere_Photos.2.img_url}} Alt = "3" height = '200' width = '250'>
+        <img src= {{mars.Hemisphere_Photos.3.img_url}} Alt = "4" height = '200' width = '250'>
+        
+          </div>
+    </div>
+
+  </div>
+</body>
+{% endfor %}
+</html>
+
