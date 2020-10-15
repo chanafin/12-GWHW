@@ -39,7 +39,20 @@
         <img src= {{mars.Hemisphere_Photos.3.img_url}} Alt = "Valles Marineris" height = '200' width = '200'>
         </div>
     </div>
-
+        
+    <div class= "row">
+        <div class= "col-md-4">
+        <h3>Mars Facts</h3>
+        <table> {{mars.Mars_Overview | safe}}</table>
+        </div>
+        <div class= "col-md-4">
+        <h3>Mars-Earth Comparsion</h3>
+        <table> {{mars.Mars_Comparison | safe}}</table>
+        </div>
+        <div class="col-md-4">
+        <h3>Latest Mars Weather</h3>
+        <h5>"{{mars.Mars_Weather}}" <br>- Mars Weather @MarsWxReport</h5>
+        </div>
     </div>
 
   </div>
