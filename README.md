@@ -6,5 +6,5 @@ The goal is to create a dashboard which scrapes specific websites for informatio
 Concepts introduced in this exercise are Splinter and Beautiful Soup, as well as the Mongo DB SQLless database.  Splinter Browswer can automate browser functions and will be used here to visit several websites. Splinter works in complement with Beautiful Soup. Once splinter visits a site, BS will parse the site's HTML. It is then up to the user to identify the information they need from the HTML based on the HTML tags. Once the scrape script is ready to go and returns the scraped data, that data is upserted into the Database and the function is redirected to the default index, which finds the DB and renders the index HTML template.
 
 
-![Image of Mars Scrper](C:\Users\chris\OneDrive\Desktop\m2m.PNG)
+![Image of Mars Scraper](C:\Users\chris\OneDrive\Desktop\m2m.PNG)
 
